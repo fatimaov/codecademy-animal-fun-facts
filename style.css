@@ -24,14 +24,16 @@ div {
 .animals {
 	display: flex;
 	flex-direction: row;
+    justify-content: center;
 	position: fixed;
+    gap: 10%;
 	width: 90%;
 	margin-top: 240px;
 	z-index: 2
 }
 
 .animal {
-	width: 33.3%;
+	width: 20.3%;
 }
 
 @media only screen and (max-width: 670px) {
