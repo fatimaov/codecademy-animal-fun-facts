@@ -10,16 +10,18 @@ function displayFact(e) {
 // Add an array of images
 const images = [];
 for (const animal in window.animals) {
-    images.push(<img key={animal} onClick={displayFact} className='animal' alt={animal} src={window.animals[animal].image} aria-label={animal} role='button'/>)
+    images.push(<img key={animal} onClick={displayFact} className='animal' alt={animal} src={window.animals[animal].image} aria-label={animal} role='button' />)
 }
 const animalFacts = (
     <div>
-        {background}
+        <h1>{title ? title : 'Click an animal for a fun fact'}</h1>
+        <div className='background-container'>
         <p id='fact'></p>
+        {background}
         <div className='animals'>
             {images}
         </div>
-        <h1>{title ? title : 'Click an animal for a fun fact'}</h1>
+        </div>
     </div>
 );
 root.render(animalFacts);

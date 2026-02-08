@@ -1,80 +1,94 @@
 body {
-    background-color: rgb(20, 20, 20);
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow: hidden;
+	background-color: rgb(20, 20, 20);
+	color: white;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 0;
+	overflow: hidden;
 }
 
 div {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
+}
+
+h1 {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	margin: 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.background-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 
 .background {
-	position: absolute;
-	margin-top: 80px;
-	width: 100%;
+	height: 100vh;
 	z-index: 1
 }
 
 #fact {
 	display: flex;
 	justify-content: center;
-    position: fixed;
-	margin-top: 15%;
-    text-align: center;
+	text-align: center;
 	width: 50%;
 	font-size: 3vw;
 	z-index: 2;
+	position: absolute;
+	margin: 0;
+	bottom: 75%;
 }
 
 .animals {
 	display: flex;
 	flex-direction: row;
-    justify-content: center;
-	position: fixed;
-    gap: 10%;
-	width: 90%;
-	margin-top: 30%;
-	z-index: 2
+	justify-content: center;
+	align-items: center;
+	gap: 10%;
+	width: 95vw;
+	z-index: 2;
+	position: absolute;
+	bottom: 15%;
 }
 
 .animal {
-	width: 20.3%;
+	width: 25%;
 }
 
 .animal:hover {
-    cursor: pointer;
-    filter: drop-shadow(0 0 15px white);
-    scale: 1.1;
-    transition: .15s ease ;
+	cursor: pointer;
+	filter: drop-shadow(0 0 15px white);
+	scale: 1.1;
+	transition: .15s ease;
 }
 
-@media only screen and (max-width: 670px) {
-	.animals {
-		margin-top: 180px;
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 1.5rem;
 	}
 
-  h1 {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 390px) {
 	.animals {
-		margin-top: 150px;
+		flex-direction: column;
+		gap: 20px;
+		width: 30vw;
+		justify-content: flex-start;
+		top: 15%;
 	}
-}
 
-@media only screen and (max-width: 300px) {
-	.animals {
-		margin-top: 130px;
+	.animal {
+		width: 100%;
 	}
-}
 
-@media only screen and (max-width: 200px) {
-	.animals {
-		margin-top: 120px;
+	#fact {
+		top: 3%;
+		font-size: 1.5rem;
+		width: 90%;
+		bottom: 0px;
 	}
 }
