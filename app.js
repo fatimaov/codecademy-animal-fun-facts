@@ -1,7 +1,7 @@
 const container = document.getElementById('app');
 const root = ReactDOM.createRoot(container);
 const title = '';
-const background = <img className='background' alt='ocean' src='/img/ocean.jpg' />;
+const background = <img className='background' alt='ocean' src='./img/ocean.jpg' />;
 // Display facts
 function displayFact(e) {
     const funFact = window.animals[e.target.alt].facts[Math.floor(Math.random() * window.animals[e.target.alt].facts.length)];
